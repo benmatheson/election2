@@ -1,0 +1,72 @@
+
+
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Voter Registration Test
+ </title>
+  <meta name="description" content="Plotly Test">
+<link href="https://fonts.googleapis.com/css?family=Bevan" rel="stylesheet">
+
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+  <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+
+
+</head>
+
+
+
+<body>
+	<p> This is an experiment to test the Plot.ly Javascript library with some 2014-2016 Alaska voter registration data.
+ <div id="myDiv" style="width: 96%; height: 500px;"><!-- Plotly chart will be drawn inside this DIV --></div>
+
+<script>
+
+var trace1 = {
+  x: ['18-19',	'20',	'21',	'22-24',	'25-34',	'35-44',	'45-54',	'55-59',	'60-61',	'62-64',	'65-74',	'ABOVE 75',	'UNKNOWN'
+],
+  y: [365,	101,	199,	347,	2318,	1406,	-82,	-63,	202,	521,	1527,	406,	17,
+],
+  name: 'Democrats',
+  type: 'bar',
+  marker: {color: '#5CA8D8'},
+};
+
+var trace2 = {
+  x: ['18-19',	'20',	'21',	'22-24',	'25-34',	'35-44',	'45-54',	'55-59',	'60-61',	'62-64',	'65-74',	'ABOVE 75',	'UNKNOWN'
+],
+  y: [-97,	-237,	-89,	-273,	855,	258,	-87,	981,	659,	1078,	2063,	1044,	26
+],
+  name: 'Republicans',
+  type: 'bar',
+  marker:{color: 'ff0000'},
+};
+
+var data = [trace1, trace2];
+
+var layout = {barmode: 'group',
+font: {
+    family: 'Bevan, monospace',
+    color: '#000000',
+    size: 13
+  },
+  xaxis: {tickangle: 0},
+  title: "Change in Alaska Voter Registration by Party, 2014-2016"
+};
+
+Plotly.newPlot('myDiv', data, layout);
+
+
+</script>
+
+
+</body>
+</html>
+
